@@ -15,7 +15,8 @@ let colors = [
 let images;
 let globStat;
 let scaleFactor;
-$(document).ready( ()=> {
+//$(document).ready( ()=> {
+$(window).on("load", ()=> {
   images = {
     /*Hoop Elements*/
     hoopBack: document.getElementById('hoop-back'),
