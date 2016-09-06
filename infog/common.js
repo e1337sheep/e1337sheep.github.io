@@ -1,0 +1,2 @@
+let images;
+let globStat;

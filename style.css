@@ -1,0 +1,448 @@
+/*General tag rules*/
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: grey;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-family: "Bob's Burgers";
+}
+h1, h2, h3, h4, h5{
+  //outline: 1px blue solid;
+  display: block;
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+h2{
+  font-size: 18em;
+}
+h3{
+  font-size: 10em;
+}
+h4{
+  font-size: 6em;
+  /*line-height magic fix for background font popping out*/
+  line-height: 1em;
+}
+h5{
+  font-size: 3em;
+}
+/*Page-wide Rules*/
+/*Rules for "two tone" fonts*/
+/*Requires 2 fonts: One normal font with gaps where color is
+  required, One background font which at least covers the gaps
+  in the first font*/
+/*A Javascript function to turn all inner html into single
+  character <span>s may be required to ensure correct placement
+  of background font across responsive layouts.*/
+.two-tone span{
+  position: relative;
+}
+.two-tone span::before{
+  text-shadow: none;
+  position: absolute;
+  content: attr(content);
+  font-family: "Bob's Burgers Background";
+  z-index: -1;
+}
+/*special rule to prevent injected <spans> blocking <a> clicks*/
+a.two-tone span{
+  pointer-events: none;
+}
+.orange-text span::before{
+  color: #fd840b;
+}
+.green-text span::before{
+  color: #00c663;
+}
+.white-text span::before{
+  color: white;
+}
+.blue-text span::before{
+  color: #00B0F0;
+}
+.black-text span::before{
+  color: #000;
+}
+.question a{
+  color: black;
+}
+.stroke-text-white-old{
+  text-shadow: -1px -1px 0 #FFF,
+                1px -1px 0 #FFF,
+               -1px  1px 0 #FFF,
+                1px  1px 0 #FFF;
+}
+.stroke-text-black-old{
+  text-shadow: -1px -1px 0 #000,
+                1px -1px 0 #000,
+               -1px  1px 0 #000,
+                1px  1px 0 #000;
+}
+.stroke-text-white{
+  text-shadow: -.01em -.01em 0 #FFF,
+                .01em -.01em 0 #FFF,
+               -.01em  .01em 0 #FFF,
+                .01em  .01em 0 #FFF;
+}
+.stroke-text-black{
+  text-shadow: -.01em -.01em 0 #000,
+                .01em -.01em 0 #000,
+               -.01em  .01em 0 #000,
+                .01em  .01em 0 #000;
+}
+.two-tone.text-shadow{
+  text-shadow: -.015em .015em .01em rgba(0,0,0,.5);
+}
+
+.vcenter{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button{
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 5em;
+  margin: auto;
+  text-align: center;
+  border: 1px solid black;
+}
+.frame{
+  width: 97vw;
+  height: 100vh;
+  margin: auto;
+  position: relative;
+}
+.frame.scroll-over{
+  top: 100vh;
+}
+/*Rules for downward arrow*/
+.arrow-down {
+	width: 0;
+	height: 0;
+	border-left: 2em solid transparent;
+	border-right: 2em solid transparent;
+	border-top: 6em solid rgba(63, 132, 104 ,1);
+  position: absolute;
+  z-index: -1;
+}
+.arrow-down::after {
+  content: " ";
+  position: absolute;
+  width: 0;
+	height: 0;
+  top: -2em;
+  right: -2em;
+	border-left: 2em solid transparent;
+	border-right: 2em solid transparent;
+	border-top: 4em solid rgba(63, 132, 104 ,1);
+  z-index: -1;
+}
+.left-arrow{
+  left: 2em;
+}
+.right-arrow{
+  right: 2em;
+}
+
+#screen-2{
+  display: none;
+}
+#screen-3{
+  display: none;
+}
+#screen-4{
+  display: none;
+}
+#screen-5{
+  display: none;
+}
+/*Screen 1A*/
+/*Statement Page*/
+#statement{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00b0f0;
+  z-index: 10;
+}
+.yolo>span:nth-child(odd)::before{
+  color: orange;
+}
+.yolo>span:nth-child(even)::before{
+  color: green;
+}
+.screen-1-arrow{
+  opacity: 0;
+  bottom: 4em;
+}
+
+/*Screen 1B*/
+/*Time Question Page*/
+#question-time{
+  background: #ABB2B2;
+  background: rgba(171, 178, 178, 0.9);
+  border-top: 2px solid black;
+  z-index: 20;
+}
+#time-question{
+  //outline: 1px blue solid;
+  text-align: center;
+  margin-top: 1em;
+}
+
+/*Screen 3*/
+/*Boring Man Page*/
+#boringman{
+  background: #ABB2B2;
+  z-index: 30;
+}
+.canvas-container{
+  //outline: 1px blue dashed;
+  position: relative;
+  width: 70%;
+  margin: auto;
+}
+
+#subs{
+  //background: rgba(255,0,0,.5);
+  //outline: 1px blue dashed;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.subtitle{
+  display: block;
+  margin: auto;
+  width: 80%;
+  border-radius: 0.25em;
+  padding: 0.25em;
+  position: relative;
+  background: rgba(0,0,0,.7);
+  font-family: Apercu;
+  text-align: center;
+  color: white;
+  font-size: 3vw;
+  z-index: 100;
+  overflow: hidden;
+}
+
+#puppet{
+  border: 1px black solid;
+  display: block;
+  margin: 2em auto;
+  width: 100%;
+}
+.skip-options{
+  //outline: red 1px solid;
+  position: absolute;
+  width: 4em;
+  bottom: 0;
+  list-style: none;
+  font-family: Apercu;
+}
+.skip-options li{
+  text-transform: uppercase;
+  border: 4px solid #00B0F0;
+  border-radius: 0.25em;
+  margin: 1em 0;
+  background: black;
+  color: white;
+  width: 8em;
+  text-align: center;
+  transition: all .2s;
+}
+.skip-options li:hover{
+  border: 4px solid green;
+}
+#skip-options-left{
+  left: -4em;
+}
+#skip-options-right{
+  right: 0;
+}
+
+/*Screen 4A*/
+/*"Ain't Nobody Got Time For That" Page*/
+#aintnobody{
+  background: black;
+  color: green;
+  text-transform: uppercase;
+  z-index: 40;
+}
+.ladies{
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+img.aint{
+  width: 50%;
+  max-height: 70vh;
+  //max-width: 50vw;
+}
+.aint-left{
+  float: left;
+}
+.aint-right{
+  transform: scaleX(-1);
+  float: right;
+}
+/*Special Rule for ensuring text after floats displays correctly*/
+.ladies+h5{
+  clear: both;
+}
+/*Screen 4B*/
+/*"Buying Butler Boast" Page*/
+#boast{
+  z-index: 500;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  overflow: visible;;
+}
+.boast-wrap{
+  //outline: 1px red solid;
+  margin: auto;
+  transform: rotate(10deg) translate(-8%, -40%);
+  overflow: hidden;
+}
+.boast-1{
+  //outline: 1px dashed blue;
+}
+.boast-2{
+  //outline: 1px blue dotted;
+  text-align: center;
+}
+.boast-2a{
+  //outline: 1px dashed red;
+  display: inline-block;
+  /*Magic Numbers, derived from science, to place number in center of image*/
+  padding: 12% 10% 10% 10%;
+  background: url('images/bb-wheel-blank.png') no-repeat center;
+  background-size: contain;
+}
+.boast-2b{
+  //outline: 1px dashed red;
+  display: inline-block;
+  /*Magic Numbers, derived from science, to put "hours" in line*/
+  padding: 12% 0 10% 0;
+}
+.screen-4-arrow{
+  opacity: 0;
+  bottom: 4em;
+}
+
+/*Screen 4C*/
+/*Hobby Question Page*/
+#question-hobby{
+  background: #ABB2B2;
+  z-index: 60;
+}
+#hobby-question{
+  //outline: 1px blue solid;
+  text-align: center;
+  margin-top: 1em;
+}
+
+/*Screen 5*/
+/*Infographic Page*/
+#infographic{
+  background: #3F8468;
+  z-index: 70;
+}
+
+/*Question Page Rules*/
+.answer-button{
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0 0 2em black;
+  margin: .5em .2em;
+  width:  4em;
+  height: 4em;
+  background: #82BF71;
+  background: white url(images/bblogo.svg) center no-repeat;
+  background-size: contain;
+  font-size: 2.4em;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 1.5em;
+  vertical-align: bottom;
+  transition: all .25s ease;
+}
+.question li{
+  //outline: 1px red solid;
+  list-style: none;
+  display: inline-block;
+
+}
+.answer-button:hover, .next-button.active:hover{
+  background-color: #fd840b;
+}
+
+/*Responsive Media Queries*/
+@media (min-width:898px) {
+  .frame{
+    //max-height: 100vh;
+  }
+}
+/*Large Devices*/
+@media (max-width:897px) {
+  body{
+    font-size: 12px;
+  }
+  .frame{
+    width: 96vw;
+  }
+}
+/*Medium Devices*/
+@media (max-width:641px){
+  body{
+    font-size: 8px;
+  }
+  .frame{
+    width: 94vw;
+  }
+}
+/*Small Devices*/
+@media (max-width: 437px){
+  body{
+    font-size: 4px;
+  }
+  .frame{
+    width: 92vw;
+  }
+}
+/*Tiny Devices*/
+@media (max-width: 207px){
+  .frame{
+    width: 90vw;
+  }
+}
+
+/*Fonts*/
+/*
+@font-face {
+  font-family: Apercu;
+  src: url('assets/apercu_regular.otf');
+}
+@font-face {
+  font-family: "Bob's Burgers";
+  src: url('assets/BobsBurgers.woff');
+}
+@font-face {
+  font-family: "Bob's Burgers Background";
+  src: url('assets/BobsBurgersBack.woff');
+}
+*/
