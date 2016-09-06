@@ -12,7 +12,7 @@ let scrollWatchID = null;
 let imageSources = {
   head: "images/boringman-head-nogob.png",
   gob: "images/boringman-head-gob.png",
-  body: "images/boringman-body.png",
+  body: "images/boringman-body-nohead-bw.png",
   rightArm: "images/boringman-arm-right.png",
   leftArm: "images/boringman-arm-left.png",
 };
@@ -123,7 +123,7 @@ let fadeCallbacks = [
       let canvas = document.getElementById('puppet');
       let ctx = canvas.getContext('2d');
 
-      status.addElement(initRightArm());
+      //status.addElement(initRightArm());
       status.addElement(initBody());
       status.addElement(initHead());
       let head = status.elements.find(x=>x.type === "head");

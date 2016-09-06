@@ -114,31 +114,5 @@
       </div>
     </div>
   </div>
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId      : '1047735381986158',
-        xfbml      : true,
-        version    : 'v2.7'
-      });
-        function onLogin(response) {
-    if (response.status == 'connected') {
-      FB.api('/me?fields=first_name', function(data) {
-        var welcomeBlock = document.getElementById('fb-welcome');
-        welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
-      });
-    }
-  }
-      // ADD ADDITIONAL FACEBOOK CODE HERE
-    };
-
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement(s); js.id = id;
-       js.src = "//connect.facebook.net/en_US/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
-  </script>
 </body>
 </html>
