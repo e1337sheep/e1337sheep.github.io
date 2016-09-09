@@ -40,9 +40,9 @@ let images;
 let spiel = "Welcome to Not Buying Butler~"+
             "the old fashioned way of buying a car~"+
             "I can say pretty much anything~"+
-            "including your name Joe~"+
-            "you're not left out either Steve Weston~"+
-            "Is this not a little creepy?~"+
+            "all this text is evaluated procedurally~"+
+            "to count syllables and move my mouth accordingly.~"+
+            "Creepy, yes?~"+
             "...~...";
 $(document).ready(()=>{
   /*split two-tone text into spans*/
