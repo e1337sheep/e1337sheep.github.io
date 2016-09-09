@@ -1,0 +1,20 @@
+/*
+.vcenter{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+*/
+/*Fonts*/
+@font-face {
+  font-family: Apercu;
+  src: url('assets/apercu_regular.otf');
+}
+@font-face {
+  font-family: "Bob's Burgers";
+  src: url('assets/BobsBurgers.woff');
+}
+@font-face {
+  font-family: "Bob's Burgers Background";
+  src: url('assets/BobsBurgersBack.woff');
+}

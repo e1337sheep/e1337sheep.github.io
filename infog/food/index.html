@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../global.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+  <script src="../common.js"></script>
+  <script src="../../js/grta.js"></script>
+  <title>Food Infographic</title>
+
+</head>
+<body>
+  <div id="wrapper">
+    <div id="info-plus-caption">
+      <div id="captions"></div>
+      <canvas id="food" width="640" height="360">
+        <div id="pizza">
+          <img id="pizza-chomps" src="images/pizza-chomps.png" alt="">
+          <img id="pizza-gaps" src="images/pizza-gaps.png" alt="">
+          <img id="pizza-nibbles" src="images/pizza-nibbles.png" alt="">
+          <img id="pepperoni-large" src="images/pepperoni-large.png" alt="">
+          <img id="pepperoni-small" src="images/pepperoni-small.png" alt="">
+        </div>
+        <div id="grapes">
+          <img id="grapes-red" src="images/grapes-red.png" alt="">
+          <img id="grapes-white" src="images/grapes-white.png" alt="">
+        </div>
+        <div id="ice-cream">
+          <img id="ice-cream-choc" src="images/ice-cream-choc.png" alt="">
+          <img id="ice-cream-pink" src="images/ice-cream-pink.png" alt="">
+          <img id="ice-cream-mint" src="images/ice-cream-mint.png" alt="">
+          <img id="hand-left" src="images/hand-cartoon-left.png" alt="">
+        </div>
+        <div id="wine">
+          <img id="wine-bottle" src="images/wine-bottle.png" alt="">
+          <img id="glass-wine" src="images/glass-wine.png" alt="">
+        </div>
+        <div id="jelly">
+          <img id="bowl-empty" src="images/bowl-empty.png" alt="">
+          <img id="chopsticks" src="images/chopsticks.png" alt="">
+          <img id="jelly" src="images/jelly.png" alt="">
+        </div>
+      </canvas>
+    </div>
+    <img src="images/blankclock.png" id="clock" alt="" style="display: none">
+  </div>
+  <script src="food.js"></script>
+</body>
+</html>
