@@ -36,13 +36,13 @@ $(window).ready( ()=> {
     caption: encodeURIComponent("Descripton has been added?"),
     description: encodeURIComponent("I scored something on something, get it!"),
   };
-  $('#fb-share').attr('href', fbShare.pre +
-                              "&app_id="+fbShare.app_id+
-                              "&redirect_uri="+fbShare.link+
-                              "&link="+fbShare.link+
-                              "&picture="+fbShare.picture+
-                              "&caption="+fbShare.caption+
-                              "&description="+fbShare.description
+  $('#fb-share').attr('href', fbShare.pre
+                              +"&app_id="+fbShare.app_id
+                              +"&redirect_uri="+fbShare.link
+                              +"&link="+fbShare.link
+                              +"&picture="+fbShare.picture
+                              +"&caption="+fbShare.caption
+                              +"&description="+fbShare.description
   );
   //Twitter link creation
   let twShare = {
@@ -52,11 +52,11 @@ $(window).ready( ()=> {
     via: "BuyingButler",
     text: encodeURIComponent("I scored this and that"),
   }
-  $('#tw-share').attr('href', twShare.pre +
-                              "&url="+twShare.url+
-                              "&hashtags="+twShare.hashtags+
-                              "&via="+twShare.via+
-                              "&text="+twShare.text
+  $('#tw-share').attr('href', twShare.pre
+                              +"&url="+twShare.url
+                              +"&hashtags="+twShare.hashtags
+                              +"&via="+twShare.via
+                              +"&text="+twShare.text
   );
   //LinkedIn link creation
   let liShare = {
@@ -67,20 +67,21 @@ $(window).ready( ()=> {
     title: encodeURIComponent("How much...?"),
     summary: encodeURIComponent("I scored something something?"),
   }
-  $('#li-share').attr('href', liShare.pre +
-                             "&mini="+liShare.mini+
-                             "&url="+liShare.url+
-                             "&source="+liShare.source+
-                             "&title="+liShare.title+
-                             "&summary="+liShare.summary
+  $('#li-share').attr('href', liShare.pre
+                             +"&mini="+liShare.mini
+                             +"&url="+liShare.url
+                             +"&source="+liShare.source
+                             +"&title="+liShare.title
+                             +"&summary="+liShare.summary
   )
   let gpShare = {
     pre: "https://plus.google.com/share\?",
     url: encodeURIComponent("https://e1337sheep.github.io/infog/learn/index.html")
   }
   $('#gp-share').attr('href', gpShare.pre
-                              //+"&url="+gpShare.url
+                              +"&url="+gpShare.url
   );
+
   //Extract unique images from fallback
   let imgSources = {};
   $('#wrapper img[id]').map( (i, x) => imgSources[grta.dashToCamel(x.id)] = x.src);
