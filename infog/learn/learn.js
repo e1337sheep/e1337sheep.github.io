@@ -27,6 +27,8 @@ $(window).ready( ()=> {
     <meta property="og:image:height" content="379"/>\
     ';
   $('head').append(metas);
+  let grt = $('head meta[property="og:description"]');
+  console.log(grt);
   //Extract unique images from fallback
   let imgSources = {};
   $('#wrapper img[id]').map( (i, x) => imgSources[grta.dashToCamel(x.id)] = x.src);
