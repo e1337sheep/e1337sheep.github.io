@@ -51,7 +51,7 @@ $(window).ready( ()=> {
     url: encodeURIComponent("https://e1337sheep.github.io/infog/learn/index.html"),
     source: encodeURIComponent("Buying Butler"),
     title: encodeURIComponent("How much...?"),
-    summary: encodeURIComponent("Change this?"),
+    summary: encodeURIComponent("I scored something something?"),
   }
   $('#li-share').attr('href', liShare.pre +
                              "&mini="+liShare.mini+
