@@ -25,7 +25,6 @@ $(window).ready( ()=> {
                <meta property="og:image"        content="http://e1337sheep.github.io/infog/learn/images/learn.png" />\
                <meta property="og:image:width"  content="669"/>\
                <meta property="og:image:height" content="379"/>\
-
   ';
 /* Dump for currently unused meta tags
 <meta itemprop="name"            content="Buying Butler">\
