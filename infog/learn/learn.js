@@ -17,21 +17,6 @@ let colors = [
 let scaleFactor;
 $(window).ready( ()=> {
   console.log('learn.js running');
-  //add meta tags to make social media work
-  let metas = '<meta property="og:url"          content="http://e1337sheep.github.io/infog/learn/index.html" />\
-               <meta property="og:type"         content="product" />\
-               <meta property="og:title"        content="Buying Butler - How much...?" />\
-               <meta property="og:description"  content="How much time will you save? [More description here]" />\
-               <meta property="og:image"        content="http://e1337sheep.github.io/infog/learn/images/learn.png" />\
-               <meta property="og:image:width"  content="669"/>\
-               <meta property="og:image:height" content="379"/>\
-  ';
-/* Dump for currently unused meta tags
-<meta itemprop="name"            content="Buying Butler">\
-<meta itemprop="description"     content="A score could go here?">\
-<meta itemprop="image"           content="https://e1337sheep.github.io/infog/learn/images/learn.png">\
-*/
-  //$('head').append(metas);
   //Facebook link creation
   let fbShare = {
     pre: "https://www.facebook.com/dialog/feed\?",
@@ -91,9 +76,9 @@ $(window).ready( ()=> {
   $('#gp-share').attr('href', gpShare.pre
                               +"&url="+gpShare.url
   );
-  console.log("pre-change:", $('#wrapper meta[itemprop="description"]')[0].content);
-  $('#wrapper meta[itemprop="description"]')[0].content = "I changed the content";
-  console.log("post-change:",$('#wrapper meta[itemprop="description"]')[0].content);
+  //console.log("pre-change:", $('#wrapper meta[itemprop="description"]')[0].content);
+  //$('#wrapper meta[itemprop="description"]')[0].content = "I changed the content";
+  //console.log("post-change:",$('#wrapper meta[itemprop="description"]')[0].content);
   //Extract unique images from fallback
   let imgSources = {};
   $('#wrapper img[id]').map( (i, x) => imgSources[grta.dashToCamel(x.id)] = x.src);
