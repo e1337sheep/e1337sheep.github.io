@@ -83,13 +83,16 @@ $(window).ready( ()=> {
   // the scheme as neccersary)
   let gpShare = {
     pre: "https://plus.google.com/share\?",
-    url: encodeURIComponent("https://e1337sheep.github.io/infog/learn/index.html")
+    url: encodeURIComponent("https://e1337sheep.github.io/infog/learn/index.html"),
+    desc: "A score could go here, also changed this now?"
   }
   $('#gp-share').attr('href', gpShare.pre
                               +"&url="+gpShare.url
   );
-  console.log($('#wrapper meta[itemprop="description"]')[0].attr('content'));
-
+  $('head').append('<meta name="description" content="'+gpShare.desc+'">');
+  //console.log("content of schema.org description", $('#wrapper meta[itemprop="description"]')[0].content);
+  //$('#wrapper meta[itemprop="description"]')[0].content = "I changed the score";
+  //console.log("content of schema.org description after change", $('#wrapper meta[itemprop="description"]')[0].content);
   //Extract unique images from fallback
   let imgSources = {};
   $('#wrapper img[id]').map( (i, x) => imgSources[grta.dashToCamel(x.id)] = x.src);
