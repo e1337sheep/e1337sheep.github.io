@@ -34,7 +34,7 @@ $(window).ready( ()=> {
   let fbShare = {
     pre: "https://www.facebook.com/dialog/feed\?",
     app_id: "1047735381986158",
-    redirect_uri: encodeURIComponent("https://e1337sheep.github.io/infog/learn/index.html"),
+    link: encodeURIComponent("https://e1337sheep.github.io/infog/learn/index.html"),
     picture: encodeURIComponent("https://e1337sheep.github.io/infog/learn/images/learn.png"),
     caption: encodeURIComponent("Descripton has been added?"),
     description: encodeURIComponent("I scored something on something, get it!"),
@@ -42,7 +42,8 @@ $(window).ready( ()=> {
   //$('#fb-share').attr('href', fbSharePre+fbShareCaption+"&description="+fbShareDesc);
   $('#fb-share').attr('href', fbShare.pre +
                               "&app_id="+fbShare.app_id+
-                              "&redirect_uri="+fbShare.redirect_uri+
+                              "&redirect_uri="+fbShare.link+
+                              "&link="+fbShare.link+
                               "&picture="+fbShare.picture+
                               "&caption="+fbShare.caption+
                               "&description="+fbShare.description
