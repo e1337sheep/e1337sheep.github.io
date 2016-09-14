@@ -91,7 +91,7 @@ $(window).ready( ()=> {
   $('#gp-share').attr('href', gpShare.pre
                               +"&url="+gpShare.url
   );
-  console.log($('#wrapped meta[itemprop="description"]'));
+  console.log($('#wrapper meta[itemprop="description"]')[0].content);
   //$('#wrapped meta[itemprop="description"]')[0].content = "I changed the content";
   //Extract unique images from fallback
   let imgSources = {};
