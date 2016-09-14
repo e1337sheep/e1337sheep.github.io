@@ -53,7 +53,7 @@ $(window).ready( ()=> {
     title: encodeURIComponent("How much...?"),
     summary: encodeURIComponent("Change this?"),
   }
-  $('li-share').attr('href', liShare.pre +
+  $('#li-share').attr('href', liShare.pre +
                              "&mini="+liShare.mini+
                              "&url="+liShare.url+
                              "&source="+liShare.source+
