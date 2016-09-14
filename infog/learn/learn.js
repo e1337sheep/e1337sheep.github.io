@@ -17,7 +17,7 @@ let colors = [
 let scaleFactor;
 $(window).ready( ()=> {
   console.log('learn.js running');
-  //add meta tags to make facebook work
+  //add meta tags to make social media work
   let metas = '  <meta property="og:url"         content="http://e1337sheep.github.io/infog/learn/index.html" />\
     <meta property="og:type"        content="product" />\
     <meta property="og:title"       content="Buying Butler - How much...?" />\
@@ -27,10 +27,7 @@ $(window).ready( ()=> {
     <meta property="og:image:height" content="379"/>\
     ';
   $('head').append(metas);
-  $('head meta[property="og:description"]').attr('content', 'I changed what this now says');
-  let grt = $('head meta[property="og:description"]').attr('content');
-  console.log("This is from meta tags", grt);
-  let fbSharePre = "https://www.facebook.com/dialog/feed?app_id=1047735381986158&redirect_uri=https%3A%2F%2Fe1337sheep.github.io%2Finfog%2Flearn%2Findex.html&picture=https%3A%2F%2Fe1337sheep.github.io%2Finfog%2Flearn%2Fimages%2Flearn.png&caption=";
+  //Facebook link creation
   let fbShare = {
     pre: "https://www.facebook.com/dialog/feed\?",
     app_id: "1047735381986158",
@@ -39,7 +36,6 @@ $(window).ready( ()=> {
     caption: encodeURIComponent("Descripton has been added?"),
     description: encodeURIComponent("I scored something on something, get it!"),
   };
-  //$('#fb-share').attr('href', fbSharePre+fbShareCaption+"&description="+fbShareDesc);
   $('#fb-share').attr('href', fbShare.pre +
                               "&app_id="+fbShare.app_id+
                               "&redirect_uri="+fbShare.link+
@@ -48,6 +44,22 @@ $(window).ready( ()=> {
                               "&caption="+fbShare.caption+
                               "&description="+fbShare.description
                             );
+  //LinkedIn link creation
+  let liShare = {
+    pre: "https://twitter.com/intent/tweet\?"
+    mini: "true",
+    url: encodeURIComponent("https://e1337sheep.github.io/infog/learn/index.html"),
+    source: encodeURIComponent("Buying Butler"),
+    title: encodeURIComponent("How much...?"),
+    summary: encodeURIComponent("Change this?"),
+  }
+  $('li-share').attr('href', liShare.pre +
+                             "&mini="+liShare.mini+
+                             "&url="+liShare.url+
+                             "&source="+liShare.source+
+                             "&title="+liShare.title+
+                             "&summary="+liShare.summary
+  )
   //Extract unique images from fallback
   let imgSources = {};
   $('#wrapper img[id]').map( (i, x) => imgSources[grta.dashToCamel(x.id)] = x.src);
