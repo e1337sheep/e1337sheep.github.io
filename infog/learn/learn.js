@@ -91,8 +91,9 @@ $(window).ready( ()=> {
   $('#gp-share').attr('href', gpShare.pre
                               +"&url="+gpShare.url
   );
-  console.log($('#wrapper meta[itemprop="description"]')[0].content);
-  //$('#wrapped meta[itemprop="description"]')[0].content = "I changed the content";
+  console.log("pre-change:", $('#wrapper meta[itemprop="description"]')[0].content);
+  $('#wrapped meta[itemprop="description"]')[0].content = "I changed the content";
+  console.log($("post-change:",'#wrapper meta[itemprop="description"]')[0].content);
   //Extract unique images from fallback
   let imgSources = {};
   $('#wrapper img[id]').map( (i, x) => imgSources[grta.dashToCamel(x.id)] = x.src);
