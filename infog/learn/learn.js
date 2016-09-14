@@ -27,8 +27,9 @@ $(window).ready( ()=> {
     <meta property="og:image:height" content="379"/>\
     ';
   $('head').append(metas);
-  let grt = $('head meta[property="og:description"]');
-  console.log(grt);
+  $('head meta[property="og:description"]').attr('content', 'I changed what this now says');
+  let grt = $('head meta[property="og:description"]').attr('content');
+  console.log("This is from meta tags", grt);
   //Extract unique images from fallback
   let imgSources = {};
   $('#wrapper img[id]').map( (i, x) => imgSources[grta.dashToCamel(x.id)] = x.src);
