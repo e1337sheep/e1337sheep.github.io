@@ -79,7 +79,7 @@ $(window).ready( ()=> {
     url: encodeURIComponent("https://e1337sheep.github.io/infog/learn/index.html")
   }
   $('#gp-share').attr('href', gpShare.pre+
-                              "&url="+gpShare.url
+                              //"&url="+gpShare.url
   );
   //Extract unique images from fallback
   let imgSources = {};
