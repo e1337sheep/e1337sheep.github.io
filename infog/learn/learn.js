@@ -17,6 +17,13 @@ let colors = [
 let scaleFactor;
 $(window).ready( ()=> {
   console.log('learn.js running');
+  //add meta tags to make facebook work
+  let metas = '  <meta property="og:url"         content="http://e1337sheep.github.io/infog/learn/index.html" />\
+    <meta property="og:type"        content="product" />\
+    <meta property="og:title"       content="Buying Butler - How much...?" />\
+    <meta property="og:description" content="How much time will you save? [More description here]" />\
+    <meta property="og:image"       content="http://e1337sheep.github.io/infog/learn/images/learn.png" />';
+  $('head').append(metas);
   //Extract unique images from fallback
   let imgSources = {};
   $('#wrapper img[id]').map( (i, x) => imgSources[grta.dashToCamel(x.id)] = x.src);
