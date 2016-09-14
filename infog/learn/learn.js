@@ -46,7 +46,7 @@ $(window).ready( ()=> {
                             );
   //LinkedIn link creation
   let liShare = {
-    pre: "https://twitter.com/intent/tweet\?",
+    pre: "http://www.linkedin.com/shareArticle\?",
     mini: "true",
     url: encodeURIComponent("https://e1337sheep.github.io/infog/learn/index.html"),
     source: encodeURIComponent("Buying Butler"),
