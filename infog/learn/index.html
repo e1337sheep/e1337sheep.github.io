@@ -4,6 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Facebook Open Graph Stuff-->
+  <meta property="og:url"         content="http://e1337sheep.github.io/infog/learn/index.html" />
+  <meta property="og:type"        content="product" />
+  <meta property="og:title"       content="Buying Butler - How much...?" />
+  <meta property="og:description" content="How much time will you save? [More description here]" />
+  <meta property="og:image"       content="http://e1337sheep.github.io/infog/learn/images/learn.png" />
+  <!--
+  <meta property="og:url"                content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+  <meta property="og:type"               content="article" />
+  <meta property="og:title"              content="When Great Minds Don’t Think Alike" />
+  <meta property="og:description"        content="How much does culture influence creative thinking?" />
+  <meta property="og:image"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+  -->
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../../global.css">
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -50,39 +64,40 @@
     <div id="info-plus-caption">
       <div id="captions"></div>
       <canvas id="learn" width="640" height="360">
+        <img src="images/learn.png" alt="" id="fallback">
         <div id="falls">
-          <img id="niagra-top" src="images/niagra-top.png" alt="">
-          <img id="niagra-bottom" src="images/niagra-bottom.png" alt="">
-          <img id="whale" src="images/whale.png" alt="">
+          <img id="niagra-top" src="images/niagra-top.png" alt="" style="display: none;">
+          <img id="niagra-bottom" src="images/niagra-bottom.png" alt="" style="display: none;">
+          <img id="whale" src="images/whale.png" alt="" style="display: none;">
         </div>
         <div id="earth-bolt-meteor">
-          <img id="earth" src="images/earth.png" alt="">
-          <img id="meteor" src="images/meteor.png" alt="">
-          <img id="bolt" src="images/bolt.png" alt="">
+          <img id="earth" src="images/earth.png" alt="" style="display: none;">
+          <img id="meteor" src="images/meteor.png" alt="" style="display: none;">
+          <img id="bolt" src="images/bolt.png" alt="" style="display: none;">
         </div>
         <div id="insects">
-          <img id="bat" src="images/bat-cartoon2.png" alt="">
-          <img id="moth-1" src="images/moth-1.png" alt="">
-          <img id="moth-2" src="images/moth-2.png" alt="">
-          <img id="moth-3" src="images/moth-3.png" alt="">
-          <img id="moth-4" src="images/moth-4.png" alt="">
-          <img id="moth-5" src="images/mosquito.png" alt="">
+          <img id="bat" src="images/bat-cartoon2.png" alt="" style="display: none;">
+          <img id="moth-1" src="images/moth-1.png" alt="" style="display: none;">
+          <img id="moth-2" src="images/moth-2.png" alt="" style="display: none;">
+          <img id="moth-3" src="images/moth-3.png" alt="" style="display: none;">
+          <img id="moth-4" src="images/moth-4.png" alt="" style="display: none;">
+          <img id="moth-5" src="images/mosquito.png" alt="" style="display: none;">
         </div>
         <div id="bulbs">
-          <img id="twister" src="images/twister-cartoon.png" alt="">
-          <img id="bulb" src="images/lightbulb.png" alt="">
+          <img id="twister" src="images/twister-cartoon.png" alt="" style="display: none;">
+          <img id="bulb" src="images/lightbulb.png" alt="" style="display: none;">
         </div>
         <div id="hbird">
-          <img id="bird" src="images/hummingbird.png" alt="">
+          <img id="bird" src="images/hummingbird.png" alt="" style="display: none;">
         </div>
         <div id="eater">
-          <img id="anteater" src="images/anteater.png" alt="">
-          <img id="ant-cartoon" src="images/ant-cartoon.png" alt="">
+          <img id="anteater" src="images/anteater.png" alt="" style="display: none;">
+          <img id="ant-cartoon" src="images/ant-cartoon.png" alt="" style="display: none;">
         </div>
         <div id="storm">
-          <img id="cloud-top" src="images/cloud-top.png" alt="">
-          <img id="cloud-bottom" src="images/cloud-bottom.png" alt="">
-          <img id="earthquake" src="images/earthquake.png" alt="">
+          <img id="cloud-top" src="images/cloud-top.png" alt="" style="display: none;">
+          <img id="cloud-bottom" src="images/cloud-bottom.png" alt="" style="display: none;">
+          <img id="earthquake" src="images/earthquake.png" alt="" style="display: none;">
           <!-- Reuse bolt.png from #earth-bolt-meteor -->
         </div>
       </canvas>
