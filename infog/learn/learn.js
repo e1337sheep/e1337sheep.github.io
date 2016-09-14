@@ -31,7 +31,7 @@ $(window).ready( ()=> {
   let grt = $('head meta[property="og:description"]').attr('content');
   console.log("This is from meta tags", grt);
   let fbSharePre = "https://www.facebook.com/dialog/feed?app_id=1047735381986158&redirect_uri=https%3A%2F%2Fe1337sheep.github.io%2Finfog%2Flearn%2Findex.html&picture=https%3A%2F%2Fe1337sheep.github.io%2Finfog%2Flearn%2Fimages%2Flearn.png&caption=";
-  let fbShareCaption = encodeURIComponent("This Has Been Changed Again, perhaps whenever I like?");
+  let fbShareCaption = encodeURIComponent("Descripton has been added?");
   let fbShareDesc = encodeURIComponent("I scored something on something, get it!");
   $('#fb-share').attr('href', fbSharePre+fbShareCaption+"&description="+fbShareDesc);
   //Extract unique images from fallback
