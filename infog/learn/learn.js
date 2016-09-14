@@ -79,6 +79,8 @@ $(window).ready( ()=> {
                              +"&title="+liShare.title
                              +"&summary="+liShare.summary
   )
+  //GooglePlus link creation (I think this can be hardcoded, then just change
+  // the scheme as neccersary)
   let gpShare = {
     pre: "https://plus.google.com/share\?",
     url: encodeURIComponent("https://e1337sheep.github.io/infog/learn/index.html")
@@ -86,6 +88,7 @@ $(window).ready( ()=> {
   $('#gp-share').attr('href', gpShare.pre
                               +"&url="+gpShare.url
   );
+  console.log($('#wrapper meta[itemprop="description"]').attr('content'));
 
   //Extract unique images from fallback
   let imgSources = {};
