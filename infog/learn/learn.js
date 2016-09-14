@@ -91,7 +91,8 @@ $(window).ready( ()=> {
   $('#gp-share').attr('href', gpShare.pre
                               +"&url="+gpShare.url
   );
-  $('#wrapped meta[itemprop="description"]')[0].content = "I changed the content";
+  console.log($('#wrapped meta[itemprop="description"]')[0]);
+  //$('#wrapped meta[itemprop="description"]')[0].content = "I changed the content";
   //Extract unique images from fallback
   let imgSources = {};
   $('#wrapper img[id]').map( (i, x) => imgSources[grta.dashToCamel(x.id)] = x.src);
