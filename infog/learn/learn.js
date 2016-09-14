@@ -44,6 +44,20 @@ $(window).ready( ()=> {
                               "&caption="+fbShare.caption+
                               "&description="+fbShare.description
                             );
+  //Twitter link creation
+  let twShare = {
+    pre: "https://twitter.com/intent/tweet\?",
+    url: encodeURIComponent("https://e1337sheep.github.io/infog/learn/index.html"),
+    hashtags: "BuyingButler,CarBuying",
+    via: "BuyingButler",
+    text: encodeURIComponent("I scored this and that"),
+  }
+  $('#tw-share').attr('href', twShare.pre +
+                              "&url="+twShare.url+
+                              "&hashtags="+twShare.hashtags+
+                              "&via="+twShare.via+
+                              "&text="+twShare.text
+  );
   //LinkedIn link creation
   let liShare = {
     pre: "http://www.linkedin.com/shareArticle\?",
