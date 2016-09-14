@@ -93,7 +93,7 @@ $(window).ready( ()=> {
   );
   console.log("pre-change:", $('#wrapper meta[itemprop="description"]')[0].content);
   $('#wrapper meta[itemprop="description"]')[0].content = "I changed the content";
-  console.log($("post-change:",'#wrapper meta[itemprop="description"]')[0].content);
+  console.log("post-change:",$('#wrapper meta[itemprop="description"]')[0].content);
   //Extract unique images from fallback
   let imgSources = {};
   $('#wrapper img[id]').map( (i, x) => imgSources[grta.dashToCamel(x.id)] = x.src);
