@@ -92,7 +92,7 @@ $(window).ready( ()=> {
                               +"&url="+gpShare.url
   );
   console.log("pre-change:", $('#wrapper meta[itemprop="description"]')[0].content);
-  $('#wrapped meta[itemprop="description"]')[0].content = "I changed the content";
+  $('#wrapper meta[itemprop="description"]')[0].content = "I changed the content";
   console.log($("post-change:",'#wrapper meta[itemprop="description"]')[0].content);
   //Extract unique images from fallback
   let imgSources = {};
