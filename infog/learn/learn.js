@@ -31,7 +31,7 @@ $(window).ready( ()=> {
 <meta itemprop="description"     content="A score could go here?">\
 <meta itemprop="image"           content="https://e1337sheep.github.io/infog/learn/images/learn.png">\
 */
-  $('head').append(metas);
+  //$('head').append(metas);
   //Facebook link creation
   let fbShare = {
     pre: "https://www.facebook.com/dialog/feed\?",
@@ -81,6 +81,8 @@ $(window).ready( ()=> {
   )
   //GooglePlus link creation (I think this can be hardcoded, then just change
   // the scheme as neccersary)
+  //Currently no way of quickly changing what is shared, as Google will cache
+  //any information (including description).  Will probably not use for now.
   let gpShare = {
     pre: "https://plus.google.com/share\?",
     url: encodeURIComponent("https://e1337sheep.github.io/infog/learn/index.html"),
@@ -89,10 +91,7 @@ $(window).ready( ()=> {
   $('#gp-share').attr('href', gpShare.pre
                               +"&url="+gpShare.url
   );
-  $('head').append('<meta name="description" content="'+gpShare.desc+'">');
-  //console.log("content of schema.org description", $('#wrapper meta[itemprop="description"]')[0].content);
-  //$('#wrapper meta[itemprop="description"]')[0].content = "I changed the score";
-  //console.log("content of schema.org description after change", $('#wrapper meta[itemprop="description"]')[0].content);
+  $('#wrapped meta[itemprop="description"]')[0].content = "I changed the content";
   //Extract unique images from fallback
   let imgSources = {};
   $('#wrapper img[id]').map( (i, x) => imgSources[grta.dashToCamel(x.id)] = x.src);
