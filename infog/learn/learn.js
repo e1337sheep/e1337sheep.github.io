@@ -31,8 +31,8 @@ $(window).ready( ()=> {
   let grt = $('head meta[property="og:description"]').attr('content');
   console.log("This is from meta tags", grt);
   let fbSharePre = "https://www.facebook.com/dialog/feed?app_id=1047735381986158&redirect_uri=https%3A%2F%2Fe1337sheep.github.io%2Finfog%2Flearn%2Findex.html&picture=https%3A%2F%2Fe1337sheep.github.io%2Finfog%2Flearn%2Fimages%2Flearn.png&caption=";
-  let fbShareCaption = "ThisHasBeenChanged";
-  $('#fb-share').attr('href', fbSharePre+fbShareCaption);
+  let fbShareCaption = "This Has Been Changed";
+  $('#fb-share').attr('href', fbSharePre+encodeURIComponent(fbShareCaption));
   //Extract unique images from fallback
   let imgSources = {};
   $('#wrapper img[id]').map( (i, x) => imgSources[grta.dashToCamel(x.id)] = x.src);
