@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../global.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+  <script src="../common.js"></script>
+  <script src="../../js/grta.js"></script>
+  <title>Learn Infographic</title>
+
+</head>
+<body>
+
+  <div id="wrapper">
+    <div id="fb-root"></div>
+    <h1>In 22 hours...</h1>
+    <a id="snap" href="#0">Click for snapshot</a>
+    <a class="share" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fe1337sheep.github.iom%2Finfog%2Flearn%2Findex.html">Facebook</a>
+    <a class="share" href="https://twitter.com/intent/tweet?text=Buying%20Butler%20https%3A%2F%2Fe1337sheep.github.iom%2Finfog%2Flearn%2Findex.html">Tweet</a>
+    <a class="share" href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fe1337sheep.github.iom%2Finfog%2Flearn%2Findex.html&title=Buying%20Butler">LinkedIn</a>
+    <a class="share" href="https://plus.google.com/share?url=https%3A%2F%2Fe1337sheep.github.iom%2Finfog%2Flearn%2Findex.html">G+</a>
+    <script>
+        let h = 500, w = 500;
+        let PopupHandler = (e) => {
+          e = (e ? e : window.event);
+          let t = (e.target ? e.target : e.srcElement);
+          let px = Math.floor(((screen.availWidth || 1024) - w) / 2);
+          let py = Math.floor(((screen.availHeight || 700) - h) / 2);
+          let popup = window.open(
+            t.href, "social",
+            "width="+w+",height="+h+
+			      ",left="+px+",top="+py+
+			      ",location=0,menubar=0,toolbar=0,status=0,scrollbars=1,resizable=1"
+          );
+          if(popup){
+            popup.focus();
+            if(e.preventDefault) e.preventDefault();
+            e.returnValue = false
+          }
+          return !!popup
+        }
+        $('a.share').map( (i,x) => x.onclick = PopupHandler );
+    </script>
+    <!--End of buttons-->
+
+    <div id="info-plus-caption">
+      <div id="captions"></div>
+      <canvas id="learn" width="640" height="360">
+        <div id="falls">
+          <img id="niagra-top" src="images/niagra-top.png" alt="">
+          <img id="niagra-bottom" src="images/niagra-bottom.png" alt="">
+          <img id="whale" src="images/whale.png" alt="">
+        </div>
+        <div id="earth-bolt-meteor">
+          <img id="earth" src="images/earth.png" alt="">
+          <img id="meteor" src="images/meteor.png" alt="">
+          <img id="bolt" src="images/bolt.png" alt="">
+        </div>
+        <div id="insects">
+          <img id="bat" src="images/bat-cartoon2.png" alt="">
+          <img id="moth-1" src="images/moth-1.png" alt="">
+          <img id="moth-2" src="images/moth-2.png" alt="">
+          <img id="moth-3" src="images/moth-3.png" alt="">
+          <img id="moth-4" src="images/moth-4.png" alt="">
+          <img id="moth-5" src="images/mosquito.png" alt="">
+        </div>
+        <div id="bulbs">
+          <img id="twister" src="images/twister-cartoon.png" alt="">
+          <img id="bulb" src="images/lightbulb.png" alt="">
+        </div>
+        <div id="hbird">
+          <img id="bird" src="images/hummingbird.png" alt="">
+        </div>
+        <div id="eater">
+          <img id="anteater" src="images/anteater.png" alt="">
+          <img id="ant-cartoon" src="images/ant-cartoon.png" alt="">
+        </div>
+        <div id="storm">
+          <img id="cloud-top" src="images/cloud-top.png" alt="">
+          <img id="cloud-bottom" src="images/cloud-bottom.png" alt="">
+          <img id="earthquake" src="images/earthquake.png" alt="">
+          <!-- Reuse bolt.png from #earth-bolt-meteor -->
+        </div>
+      </canvas>
+    </div>
+    <img src="images/blankclock.png" id="clock" alt="" style="display: none">
+  </div>
+  <script src="learn.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: black;
+  font-family: sans-serif;
+}
+h1{
+  display: inline-block;
+  color: white;
+}
+.vcenter{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#wrapper{
+  width: 98vw;
+  height : 98vh;
+  margin: 1vh auto;
+  position: relative;
+}
+#info-plus-caption{
+  position: relative;
+}
+#food{
+  position: relative;
+  width: 100%;
+  max-width: 160vh;
+  max-height: 90vh;
+  background: #222 url('images/noise3.png');
+  opacity: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#captions{
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  max-width: 160vh;
+  height: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 1;
+}
+/*Depricated?*/
+#frame{
+  outline:1px red solid;
+  position: absolute;
+  top: 3%;
+  bottom: 3%;
+  left: 3%;
+  right: 3%;
+  background: black;
+  background: grey url('images/noise3.png');
+  border: 1px solid black;
+  box-shadow: 5px 5px 10px 3px rgba(0,0,0,.5);
+}
+
+.caption{
+  display: inline-block;
+  border-radius: 0.25em;
+  padding: 0.25em;
+  position: absolute;
+  background: rgba(0,0,0,.7);
+  font-family: Apercu;
+  text-align: center;
+  color: white;
+  //font-size: 1em;
+  font-size: 1.9vw;
+  z-index: 100;
+  overflow: hidden;
+}
+.fb-share-button{
+  vertical-align: super;
+  position: relative;
+  top: 1px;
+}
+.twitter-share-button{
+  vertical-align: baseline;
+}
+@media (min-width: 160vh){
+  .caption{
+    font-size: 3vh;
+  }
+}
